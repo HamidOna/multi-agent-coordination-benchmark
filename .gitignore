@@ -1,0 +1,98 @@
+# Multi-Agent Coordination Benchmark .gitignore
+
+# Environment and API Keys
+.env
+.env.local
+.env.*.local
+api_keys.txt
+credentials.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+env/
+ENV/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+notebooks/scratch/
+
+# Research Data (be selective about what to track)
+data/raw_documents/*
+!data/raw_documents/.gitkeep
+data/ground_truth/*
+!data/ground_truth/example_annotation.json
+experiments/results/raw/*
+!experiments/results/raw/.gitkeep
+
+# Large files
+*.pdf
+*.docx
+*.xlsx
+*.zip
+*.tar.gz
+
+# Logs
+logs/*
+!logs/.gitkeep
+*.log
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Experiment outputs (track only processed results)
+experiments/results/raw/*
+!experiments/results/processed/
+experiments/results/figures/*.png
+!experiments/results/figures/final_*.png
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+.cache/
+
+# API call logs (contain tokens)
+api_calls.json
+token_usage.csv
+
+# But DO track these important files
+!experiments/configs/*.yaml
+!experiments/prompts/*.json
+!data/synthetic/*.json
+!requirements.txt
+!setup.py
